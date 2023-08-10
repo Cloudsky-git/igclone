@@ -44,6 +44,8 @@ gem "bootsnap", require: false
 
 gem "font-awesome-sass", "~> 6.4.2"
 
+gem 'activestorage-validator'
+
 gem 'devise', '~> 4.9', '>= 4.9.2'
 # Use Sass to process CSS
 # gem "sassc-rails"
