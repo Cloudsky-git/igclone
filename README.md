@@ -1,24 +1,12 @@
-# README
+Instagram clone app that among others features:
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- User Accoutns & Authentication
+- User Posts(creating, updating, deleting) woth some more detailed options
+- User's profile page
+- Posts'likes system
+- Posts' comments
+- User's home page with base layout
+- Follow system
+- Users' suggestions system
+- Post feed
+- User search system
