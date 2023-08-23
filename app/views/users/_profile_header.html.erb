@@ -1,10 +1,14 @@
 <div class="container border-bottom d-flex justify-content-center align-items-center gap-5", style="min-height: 20rem;">
-  <%= image_tag user.profile_pic.attached ?  user.profile_pic : 'user.png', class: "img-thumbnail rounded-circle w-25", style: "max-width: 8rem; max-height: 8rem;" %>
+  <%= image_tag user.profile_pic.attached? ?  user.profile_pic : 'user.png', class: "img-thumbnail rounded-circle w-25", style: "max-width: 8rem; max-height: 8rem;" %>
   <div class="w-50 d-flex flex-column gap-4">
     <div class="d-flex gap-3 align-items-center">
       <p class="m-0 fw-bold"><%= user.username %></p>
       <button class="btn border border-1"> Message </button>
-      <button class="btn btn-primary border border-1"> Follow </button>
+      <% if current_user == user %>
+        <%= link_to 'Edit Profile', edit_user_registration_path , class: "btn border border-1" %>
+      <% else %>
+        <button class="btn btn-primary border border-1"> Follow </button>
+      <% end %>
     </div>
     <div class="d-flex gap-5">
       <small class="fw-bold"><%= pluralize(user.posts.count, "Post") %></small>

@@ -2,7 +2,7 @@
   <div class="d-flex">
     <%= image_tag 'user.png', class: "img-thumbnail rounded-circle", style: "width: 2.5rem" %>
     <div class="d-flex flex-column mx-3 justify-content-center">
-      <small class="fw-bold" style="overflow: hidden; white-space: nowrap; text-overflow: ellipsis; max-width:10rem"><%= liker.username %></small>
+      <small class="fw-bold" style="overflow: hidden; white-space: nowrap; text-overflow: ellipsis; max-width:10rem"><%= link_to liker, class:"text-dark", style: "text-decoration:none", target:"_top" do %><%= liker.username %></small><% end %>
     </div>
   </div>
   <%= link_to root_path, class:"btn btn-primary", style: "text-decoration: none" do %>

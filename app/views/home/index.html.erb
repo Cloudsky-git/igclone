@@ -3,7 +3,7 @@
   <div class="d-flex flex-column gap-3">
       <%= render "stories/stories_list" %>
       <div class="d-flex flex-column">
-        <% current_user.posts.each do |p| %>
+        <% @posts.each do |p| %>
           <%= render 'posts/post', post: p %>
         <% end %>
       </div> 
