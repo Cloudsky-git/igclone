@@ -1,9 +1,9 @@
 <div id="post<%=comment.post_id%>ModalComment<%=comment.id%>">
   <div class="d-flex justify-content-between">
     <div class="d-flex">
-      <%= image_tag 'user.png', class: "img-thumbnail rounded-circle", style: "width: 2.5rem; max-height: 2.5rem" %>
+      <%= image_tag comment.user.profile_pic.attached? ? comment.user.profile_pic : 'user.png', class: "img-thumbnail rounded-circle", style: "width: 2.5rem; max-height: 2.5rem" %>
       <div class="d-flex flex-column mx-3 justify-content-center">
-        <small class="card-text m-0 fw-bold"> <%= link_to comment.user, class:"text-dark", style: "text-decoration:none", target:"_top" do %><%= comment.user.username %></small><% end %>
+        <small class="card-text m-0 fw-bold"> <%= link_to comment.user, class:"text-dark", style: "text-decoration:none", data: {turbo: 'false'} do %><%= comment.user.username %></small><% end %>
         <small><%= comment.body %> </small>
         <small class="text-muted"><%= time_ago_in_words(comment.created_at)%> ago</small>
       </div>
